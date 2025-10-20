@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PureVillage Ghee — Pure Luxury Desi Ghee</title>
+  <meta name="description" content="PureVillage Ghee — Pure Luxury desi ghee made the traditional way. Buy 1kg at ₹1199 or 2kg pack at ₹2399. Fresh, pure, golden goodness.">
+  <link rel="icon" href="image/gheelogo.jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --gold:#C99B44;
+      --deep:#0f1724;
+      --muted:#6b7280;
+      --bg:#fffdf8;
+      --card:#ffffff;
+      --radius:16px;
+    }
+    *{box-sizing:border-box;font-family:'Poppins',system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    body{margin:0;background:var(--bg);color:var(--deep);}
+    .container{max-width:1100px;margin:36px auto;padding:20px;animation:fadeIn 1.2s ease-in;}
+
+    /* Animations */
+    @keyframes fadeIn {
+      0%{opacity:0;transform:translateY(20px);}
+      100%{opacity:1;transform:translateY(0);}
+    }
+    @keyframes zoomIn {
+      0%{transform:scale(0.95);opacity:0;}
+      100%{transform:scale(1);opacity:1;}
+    }
+    @keyframes pulse {
+      0%{transform:scale(1);}
+      50%{transform:scale(1.08);}
+      100%{transform:scale(1);}
+    }
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;animation:fadeIn 1s ease-in;}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#fff 0%, #f7f3ea 100%);box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    .logo img{width:44px;height:44px;object-fit:cover;border-radius:8px}
+    .brand h1{margin:0;font-size:20px;letter-spacing:0.4px}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;margin-top:22px;align-items:center}
+    .card{background:var(--card);border-radius:var(--radius);padding:26px;box-shadow:0 10px 30px rgba(13,12,11,0.06);animation:zoomIn 0.8s ease-in;}
+    .tagline{color:var(--gold);font-weight:700;letter-spacing:0.6px}
+    .headline{font-size:28px;margin:12px 0 10px}
+    .desc{color:var(--muted);line-height:1.5}
+    .features{display:flex;gap:12px;margin-top:18px}
+    .feat{padding:10px 12px;border-radius:12px;background:#fff8e8;font-weight:600;color:#7a5d2b;font-size:13px}
+
+    /* Product card */
+    .product{padding:20px;border-radius:12px;animation:zoomIn 0.9s ease-in;}
+    .product img{width:100%;height:260px;object-fit:cover;border-radius:12px;transition:transform 0.4s ease;}
+    .product img:hover{transform:scale(1.05);}
+    .price-row{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+    .price{font-size:22px;font-weight:700;color:var(--deep)}
+    .old{font-size:14px;text-decoration:line-through;color:var(--muted)}
+
+    .selectors{margin-top:14px;display:flex;gap:10px;align-items:center}
+    .qty{display:flex;align-items:center;gap:8px}
+    .qty button{background:var(--gold);border:none;color:#fff;padding:8px 12px;border-radius:10px;font-weight:700;cursor:pointer;transition:transform 0.2s;}
+    .qty button:hover{transform:scale(1.1);}
+    .qty input{width:70px;padding:8px;border-radius:10px;border:1px solid #eee;text-align:center}
+
+    .total{margin-top:12px;font-size:18px;animation:fadeIn 1s ease;}
+
+    .btns{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;}
+    .btn{background:var(--deep);color:#fff;padding:12px 16px;border-radius:12px;border:none;cursor:pointer;font-weight:700;transition:transform 0.2s, background 0.3s;}
+    .btn:hover{transform:scale(1.05);background:#1a2438;}
+    .btn.secondary{background:transparent;color:var(--deep);border:2px solid rgba(15,23,36,0.06)}
+    .whatsapp{background:#25D366;padding:12px 16px;color:#fff;border-radius:12px;border:none;cursor:pointer;font-weight:700;animation:pulse 2s infinite ease-in-out;}
+    .whatsapp:hover{background:#1ebe5a;transform:scale(1.05);}
+
+    /* Sections */
+    section{margin-top:26px;animation:fadeIn 1.2s ease;}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .small{background:#fff;padding:16px;border-radius:12px;transition:transform 0.3s, box-shadow 0.3s;}
+    .small:hover{transform:translateY(-5px);box-shadow:0 6px 16px rgba(0,0,0,0.08);}
+
+    footer{margin-top:30px;text-align:center;color:var(--muted);font-size:14px;animation:fadeIn 1.3s ease;}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .product img{height:200px}
+      .grid-3{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <img src="image/gheelogo.jpeg" alt="PureVillage Ghee Logo">
+        </div>
+        <div>
+          <h1>PureVillage Ghee</h1>
+          <p>Luxury Pure — Tradition in every jar</p>
+        </div>
+      </div>
+      <div>
+        <strong>Call / WhatsApp:</strong> <a href="tel:+917042061974">+91 70420 61974</a>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="card">
+        <div class="tagline">Luxury • Pure • Authentic</div>
+        <h2 class="headline">PureVillage — Liquid Gold, Made the Old Way</h2>
+        <p class="desc">Handmade desi ghee made from farm-fresh cow's milk using slow-cooking and traditional churning. Rich aroma, golden colour, and wholesome nutrition — perfect for daily cooking and ceremonial use.</p>
+
+        <div class="features">
+          <div class="feat">A2 Cow Milk</div>
+          <div class="feat">Small-Batch</div>
+          <div class="feat">No Preservatives</div>
+        </div>
+
+        <section>
+          <div class="grid-3">
+            <div class="small">
+              <h4>Why PureVillage?</h4>
+              <p style="color:var(--muted)">Traditional methods, transparent sourcing, and strict hygiene. We keep it authentic — the taste speaks for itself.</p>
+            </div>
+            <div class="small">
+              <h4>Shipping</h4>
+              <p style="color:var(--muted)">Pan-India shipping available. Free shipping on orders above ₹3000.</p>
+            </div>
+            <div class="small">
+              <h4>Guarantee</h4>
+              <p style="color:var(--muted)">Freshness guaranteed. If you are not satisfied, contact us within 7 days for a refund.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="card product">
+        <img id="productImage" src="image/desighee.png" alt="PureVillage Desi Ghee">
+        <div class="price-row">
+          <div>
+            <div style="font-size:13px;color:var(--muted)">Price</div>
+            <div class="price">₹1199 <span style="font-size:14px;color:var(--muted);font-weight:600">/ kg</span></div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:13px;color:var(--muted)">2kg Special</div>
+            <div class="old">₹2599</div>
+            <div style="font-weight:700;color:var(--gold);">Now ₹2399</div>
+          </div>
+        </div>
+
+        <div class="selectors">
+          <div>
+            <label style="font-weight:700">Select quantity (kg)</label>
+            <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
+              <div class="qty">
+                <button onclick="changeQty(-1)">-</button>
+                <input id="qtyInput" type="number" min="1" max="20" value="1" onchange="updatePrice()">
+                <button onclick="changeQty(1)">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="total">
+          <div>Order summary:</div>
+          <div style="margin-top:6px;font-weight:700">Total: <span id="totalPrice">₹1199</span></div>
+          <div style="font-size:13px;color:var(--muted);margin-top:6px" id="perKgInfo">Effective: ₹1199/kg</div>
+        </div>
+
+        <div class="btns">
+          <button class="whatsapp" onclick="buyWhatsApp()">Buy on WhatsApp</button>
+          <button class="btn" onclick="addToCart()">Add to Cart</button>
+          <button class="btn secondary" onclick="downloadInvoice()">Get Invoice</button>
+        </div>
+
+        <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+          <strong>Note:</strong> Bundle applied automatically (2kg pack = ₹2399). For odd quantities we combine packs for best price.
+        </div>
+      </aside>
+    </div>
+
+    <section class="card">
+      <h3>Testimonials</h3>
+      <div style="display:flex;gap:12px;margin-top:10px;flex-wrap:wrap">
+        <div style="background:#fff8f2;padding:12px;border-radius:12px;flex:1;min-width:200px">“Best ghee I've used — flavour is unbeatable.” — S. Kumar</div>
+        <div style="background:#fff8f2;padding:12px;border-radius:12px;flex:1;min-width:200px">“Aroma and colour are perfect. Will order again.” — R. Singh</div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <strong>PureVillage Ghee</strong> • Made with care • <a href="tel:+917042061974">+91 70420 61974</a></div>
+    </footer>
+  </div>
+
+  <script>
+    // Pricing
+    const PRICE_1KG = 1199;
+    const PRICE_2KG = 2399;
+
+    function changeQty(delta){
+      const input = document.getElementById('qtyInput');
+      let val = parseInt(input.value) || 1;
+      val = Math.min(20, Math.max(1, val + delta));
+      input.value = val;
+      updatePrice();
+    }
+
+    function updatePrice(){
+      const qty = Math.max(1, parseInt(document.getElementById('qtyInput').value || 1));
+      const pairs = Math.floor(qty / 2);
+      const rem = qty % 2;
+      const total = pairs * PRICE_2KG + rem * PRICE_1KG;
+      const effective = (total / qty).toFixed(0);
+      document.getElementById('totalPrice').innerText = '₹' + total;
+      document.getElementById('perKgInfo').innerText = 'Effective: ₹' + effective + '/kg';
+    }
+
+    function buyWhatsApp(){
+      const qty = parseInt(document.getElementById('qtyInput').value || 1);
+      const pairs = Math.floor(qty / 2);
+      const rem = qty % 2;
+      const total = pairs * PRICE_2KG + rem * PRICE_1KG;
+
+      const msg = encodeURIComponent(`Hello, I want to order *PureVillage Ghee* — ${qty} kg.\nTotal: ₹${total}\n\nPlease share your *Full Name*, *Address*, and *Phone Number* for delivery.\n\nNote: ✅ Only online payment accepted before dispatch.`);
+      const phone = '917042061974';
+      const url = `https://wa.me/${phone}?text=${msg}`;
+      window.open(url,'_blank');
+    }
+
+    function addToCart(){
+      alert('Added to cart (demo). Use "Buy on WhatsApp" to confirm your order.');
+    }
+
+    function downloadInvoice(){
+      const qty = parseInt(document.getElementById('qtyInput').value || 1);
+      const pairs = Math.floor(qty / 2);
+      const rem = qty % 2;
+      const total = pairs * PRICE_2KG + rem * PRICE_1KG;
+      const txt = `PureVillage Ghee\nQuantity: ${qty} kg\nTotal: ₹${total}\nNote: Only online payment accepted.`;
+      const blob = new Blob([txt], {type: 'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'invoice.txt'; document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    updatePrice();
+  </script>
+</body>
+</html>
